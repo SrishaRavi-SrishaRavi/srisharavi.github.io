@@ -2,7 +2,7 @@
 
 ![Website Preview](./images/preview.jpg)
 
-This is my professional portfolio website showcasing my skills, experience, and projects as a Data Scientist.
+This is my professional portfolio website showcasing my skills, experience, and projects as a Data Analyst and Business Analyst.
 
 ## Features
 - Responsive design

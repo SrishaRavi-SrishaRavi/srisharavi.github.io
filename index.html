@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Srisha Ravi | Data Analyst</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --dark: #353535;
+            --primary: #3C6E71;
+            --white: #FFFFFF;
+            --light: #D9D9D9;
+            --secondary: #284B63;
+            --accent: #58A4B0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--white);
+        }
+        
+        /* Vibrant Header */
+        header {
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .profile-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--accent);
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--white);
+        }
+        
+        h2 {
+            font-size: 1.5rem;
+            color: var(--light);
+            margin-bottom: 1rem;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+        
+        .social-links a {
+            color: var(--white);
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: var(--accent);
+            transform: translateY(-3px);
+        }
+        
+        /* Colorful Sections */
+        section {
+            padding: 3rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            color: var(--secondary);
+            margin-bottom: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid var(--accent);
+            display: inline-block;
+        }
+        
+        /* Experience Cards */
+        .experience-grid {
+            display: grid;
+            gap: 2rem;
+        }
+        
+        .experience-card {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-left: 5px solid var(--primary);
+            transition: transform 0.3s;
+        }
+        
+        .experience-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        
+        .experience-card h3 {
+            color: var(--secondary);
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .experience-card h4 {
+            color: var(--primary);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .experience-card ul {
+            padding-left: 1.5rem;
+        }
+        
+        .experience-card li {
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+        
+        .experience-card li::before {
+            content: '▹';
+            position: absolute;
+            left: -1.2rem;
+            color: var(--accent);
+        }
+        
+        /* Colorful Project Grid */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .project-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        
+        .project-image {
+            height: 180px;
+            overflow: hidden;
+        }
+        
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .project-card:hover .project-image img {
+            transform: scale(1.1);
+        }
+        
+        .project-info {
+            padding: 1.5rem;
+        }
+        
+        .project-info h3 {
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .project-tag {
+            background: var(--light);
+            color: var(--dark);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+        
+        /* Skills Section with Color Blocks */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .skill-category {
+            background: var(--light);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-top: 4px solid var(--accent);
+        }
+        
+        .skill-category h3 {
+            color: var(--secondary);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .skill-category ul {
+            list-style: none;
+        }
+        
+        .skill-category li {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .skill-category li::before {
+            content: '•';
+            color: var(--primary);
+            margin-right: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        /* Contact Section */
+        .contact-info {
+            background: linear-gradient(135deg, var(--light), var(--white));
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--accent);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .contact-text h4 {
+            color: var(--secondary);
+            margin-bottom: 0.2rem;
+        }
+        
+        .contact-text a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .contact-text a:hover {
+            color: var(--accent);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--secondary);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .project-grid, .skills-container {
+                grid-template-columns: 1fr;
+            }
+            
+            section {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="profile-header">
+            <img src="images/profile-pic.jpg" alt="Srisha Ravi" class="profile-img">
+            <h1>Srisha Ravi</h1>
+            <h2>Data Analyst | SQL | Python | Power BI</h2>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/srisharavi" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/srisharavi" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="mailto:srisharaviii@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="tel:+919487400124"><i class="fas fa-phone"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <p>Data Analyst with 7+ years of experience transforming complex data into actionable insights. Skilled in SQL, Python, and data visualization tools to drive business decisions. Passionate about creating intuitive dashboards and reports that make data accessible to all stakeholders.</p>
+    </section>
+
+    <section id="experience">
+        <h2 class="section-title">Professional Experience</h2>
+        <div class="experience-grid">
+            <div class="experience-card">
+                <h3>Senior Associate - Data Analyst</h3>
+                <h4>Kyndryl | 2021 - Present</h4>
+                <ul>
+                    <li>Created analytical tools for Incident, Problem, Change, and SLA/KPI tracking</li>
+                    <li>Developed interactive dashboards improving stakeholder understanding by 100%</li>
+                    <li>Automated monthly reporting, saving 20+ hours per month</li>
+                </ul>
+            </div>
+            
+            <div class="experience-card">
+                <h3>Service Delivery Coordinator</h3>
+                <h4>DXC Technologies | 2018 - 2021</h4>
+                <ul>
+                    <li>Coordinated Change Advisory Board meetings for IT infrastructure changes</li>
+                    <li>Reduced process paperwork by 75% through automation</li>
+                    <li>Implemented new tracking system improving change success rate by 30%</li>
+                </ul>
+            </div>
+            
+            <div class="experience-card">
+                <h3>Incident Manager</h3>
+                <h4>NTT Data Services | 2016 - 2018</h4>
+                <ul>
+                    <li>Reduced major incident resolution time by 40%</li>
+                    <li>Maintained 95% customer satisfaction during critical outages</li>
+                    <li>Implemented ITIL processes improving efficiency by 25%</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="images/netflix-analysis.jpg" alt="Netflix Analysis">
+                </div>
+                <div class="project-info">
+                    <h3>Netflix Content Analysis</h3>
+                    <p>SQL analysis of movies/TV shows distribution, ratings, and release trends</p>
+                    <div class="project-tags">
+                        <span class="project-tag">SQL</span>
+                        <span class="project-tag">Tableau</span>
+                        <span class="project-tag">Data Visualization</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="images/pwc-dashboard.jpg" alt="PWC Analysis">
+                </div>
+                <div class="project-info">
+                    <h3>Call Center Analytics</h3>
+                    <p>Dashboard for analyzing call volume, agent performance and CSAT</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Power BI</span>
+                        <span class="project-tag">DAX</span>
+                        <span class="project-tag">KPIs</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="images/gold-prediction.jpg" alt="Gold Price Prediction">
+                </div>
+                <div class="project-info">
+                    <h3>Gold Price Prediction</h3>
+                    <p>Time series forecasting using Linear Regression</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">Scikit-learn</span>
+                        <span class="project-tag">Pandas</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3>Data Analysis</h3>
+                <ul>
+                    <li>SQL (Advanced)</li>
+                    <li>Python (Pandas, NumPy)</li>
+                    <li>Data Cleaning</li>
+                    <li>Statistical Analysis</li>
+                </ul>
+            </div>
+            
+            <div class="skill-category">
+                <h3>Visualization</h3>
+                <ul>
+                    <li>Power BI</li>
+                    <li>Tableau</li>
+                    <li>Matplotlib/Seaborn</li>
+                    <li>Dashboard Design</li>
+                </ul>
+            </div>
+            
+            <div class="skill-category">
+                <h3>Tools & Technologies</h3>
+                <ul>
+                    <li>Excel (Advanced)</li>
+                    <li>Jupyter Notebooks</li>
+                    <li>Git Version Control</li>
+                    <li>ITIL Framework</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-info">
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-text">
+                    <h4>Email</h4>
+                    <a href="mailto:srisharaviii@gmail.com">srisharaviii@gmail.com</a>
+                </div>
+            </div>
+            
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <div class="contact-text">
+                    <h4>Phone</h4>
+                    <a href="tel:+919487400124">+91 9487400124</a>
+                </div>
+            </div>
+            
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <i class="fab fa-linkedin-in"></i>
+                </div>
+                <div class="contact-text">
+                    <h4>LinkedIn</h4>
+                    <a href="https://linkedin.com/in/srisharavi" target="_blank">linkedin.com/in/srisharavi</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Srisha Ravi. All rights reserved.</p>
+    </footer>
+</body>
+</html>
