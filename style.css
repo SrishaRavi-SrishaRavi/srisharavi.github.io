@@ -5,11 +5,12 @@
     --light: #F3F4F6;       /* Light Gray */
     --dark: #1F2937;        /* Charcoal */
     --white: #FFFFFF;       /* White */
+    --highlight: #F7A300;   /* Warm Yellow for highlights */
 }
 
 /* Global Styles */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', sans-serif; /* Fun font */
     line-height: 1.6;
     color: var(--dark);
     background-color: #f9f9f9;
@@ -23,7 +24,7 @@ body {
 header {
     background: linear-gradient(135deg, var(--primary), var(--secondary));
     color: white;
-    padding: 2rem 0;
+    padding: 2.5rem 0;
     text-align: center;
     animation: slideIn 1.5s ease-out; /* Slide-in animation */
 }
@@ -32,6 +33,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 2rem;
 }
 
 .profile-img {
@@ -45,7 +47,7 @@ header {
 }
 
 .profile-img:hover {
-    transform: scale(1.1); /* Image zoom effect */
+    transform: scale(1.2); /* Zoom-in effect */
 }
 
 /* Navigation Styles */
@@ -55,6 +57,7 @@ nav {
     position: sticky;
     top: 0;
     z-index: 100;
+    transition: all 0.3s ease-in-out;
 }
 
 nav ul {
@@ -76,11 +79,12 @@ nav a {
     font-weight: 600;
     padding: 1rem 0;
     display: block;
-    transition: color 0.3s;
+    transition: color 0.3s, transform 0.3s;
 }
 
 nav a:hover {
     color: var(--secondary);
+    transform: scale(1.1); /* Hover effect */
 }
 
 /* Card Styles */
@@ -95,6 +99,7 @@ nav a:hover {
 
 .card:hover {
     transform: translateY(-10px); /* Card lift effect */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* More lift effect */
 }
 
 /* Skills Grid */
@@ -113,6 +118,7 @@ nav a:hover {
 
 .skill-category:hover {
     transform: scale(1.05); /* Hover effect */
+    background-color: var(--highlight); /* Highlight on hover */
 }
 
 /* Project Grid */
@@ -131,6 +137,7 @@ nav a:hover {
 
 .project-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); /* Hover lift */
 }
 
 .project-card img {
@@ -198,6 +205,13 @@ input, textarea {
     border: 1px solid #ddd;
     border-radius: 4px;
     font-family: inherit;
+    transition: all 0.3s ease-in-out;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 8px rgba(79, 70, 229, 0.5); /* Focus effect */
 }
 
 button {
@@ -207,11 +221,12 @@ button {
     padding: 1rem 2rem;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 button:hover {
     background-color: var(--secondary);
+    transform: scale(1.05); /* Button hover scale */
 }
 
 /* Footer */
@@ -221,6 +236,7 @@ footer {
     text-align: center;
     padding: 2rem 0;
     margin-top: 2rem;
+    animation: fadeIn 1.5s ease-out; /* Fade-in animation */
 }
 
 /* Responsive */
