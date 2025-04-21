@@ -3,12 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Srisha Ravi | Data Scientist specializing in Python, Machine Learning, and Data Analysis">
-    <meta name="keywords" content="Data Scientist, Python, Machine Learning, AI, Data Analysis, SQL, Power BI, Tableau">
-    <meta name="author" content="Srisha Ravi">
     <title>Srisha Ravi | Data Scientist</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" async>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
             --primary: #4F46E5;     /* Indigo */
@@ -31,7 +28,7 @@
             color: var(--dark);
             background-color: var(--white);
         }
-
+        
         /* Vibrant Header */
         header {
             background: linear-gradient(135deg, var(--secondary), var(--primary));
@@ -40,13 +37,13 @@
             text-align: center;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
-
+        
         .profile-header {
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-
+        
         .profile-img {
             width: 150px;
             height: 150px;
@@ -55,43 +52,43 @@
             border: 5px solid var(--accent);
             margin-bottom: 1rem;
         }
-
+        
         h1 {
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
             color: var(--white);
         }
-
+        
         h2 {
             font-size: 1.5rem;
             color: var(--light);
             margin-bottom: 1rem;
         }
-
+        
         .social-links {
             display: flex;
             gap: 1.5rem;
             justify-content: center;
         }
-
+        
         .social-links a {
             color: var(--white);
             font-size: 1.5rem;
             transition: transform 0.3s;
         }
-
+        
         .social-links a:hover {
             color: var(--accent);
             transform: translateY(-3px);
         }
-
+        
         /* Colorful Sections */
         section {
             padding: 3rem 2rem;
             max-width: 1200px;
             margin: 0 auto;
         }
-
+        
         .section-title {
             font-size: 2rem;
             color: var(--secondary);
@@ -100,13 +97,13 @@
             border-bottom: 3px solid var(--accent);
             display: inline-block;
         }
-
+        
         /* Experience Cards */
         .experience-grid {
             display: grid;
             gap: 2rem;
         }
-
+        
         .experience-card {
             background: var(--white);
             border-radius: 10px;
@@ -115,47 +112,47 @@
             border-left: 5px solid var(--primary);
             transition: transform 0.3s;
         }
-
+        
         .experience-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 20px rgba(0,0,0,0.15);
         }
-
+        
         .experience-card h3 {
             color: var(--secondary);
             font-size: 1.3rem;
             margin-bottom: 0.5rem;
         }
-
+        
         .experience-card h4 {
             color: var(--primary);
             font-size: 1rem;
             margin-bottom: 1rem;
         }
-
+        
         .experience-card ul {
             padding-left: 1.5rem;
         }
-
+        
         .experience-card li {
             margin-bottom: 0.5rem;
             position: relative;
         }
-
+        
         .experience-card li::before {
             content: '▹';
             position: absolute;
             left: -1.2rem;
             color: var(--accent);
         }
-
+        
         /* Colorful Project Grid */
         .project-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
-
+        
         .project-card {
             background: var(--white);
             border-radius: 10px;
@@ -163,44 +160,44 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             transition: all 0.3s;
         }
-
+        
         .project-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 30px rgba(0,0,0,0.2);
         }
-
+        
         .project-image {
             height: 180px;
             overflow: hidden;
         }
-
+        
         .project-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s;
         }
-
+        
         .project-card:hover .project-image img {
             transform: scale(1.1);
         }
-
+        
         .project-info {
             padding: 1.5rem;
         }
-
+        
         .project-info h3 {
             color: var(--secondary);
             margin-bottom: 0.5rem;
         }
-
+        
         .project-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
             margin-top: 1rem;
         }
-
+        
         .project-tag {
             background: var(--light);
             color: var(--dark);
@@ -208,44 +205,44 @@
             border-radius: 20px;
             font-size: 0.8rem;
         }
-
+        
         /* Skills Section with Color Blocks */
         .skills-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1.5rem;
         }
-
+        
         .skill-category {
             background: var(--light);
             padding: 1.5rem;
             border-radius: 10px;
             border-top: 4px solid var(--accent);
         }
-
+        
         .skill-category h3 {
             color: var(--secondary);
             margin-bottom: 1rem;
             font-size: 1.2rem;
         }
-
+        
         .skill-category ul {
             list-style: none;
         }
-
+        
         .skill-category li {
             margin-bottom: 0.5rem;
             display: flex;
             align-items: center;
         }
-
+        
         .skill-category li::before {
             content: '•';
             color: var(--primary);
             margin-right: 0.5rem;
             font-size: 1.2rem;
         }
-
+        
         /* Contact Section */
         .contact-info {
             background: linear-gradient(135deg, var(--light), var(--white));
@@ -253,13 +250,13 @@
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
-
+        
         .contact-item {
             display: flex;
             align-items: center;
             margin-bottom: 1.5rem;
         }
-
+        
         .contact-icon {
             width: 50px;
             height: 50px;
@@ -272,22 +269,22 @@
             margin-right: 1rem;
             font-size: 1.2rem;
         }
-
+        
         .contact-text h4 {
             color: var(--secondary);
             margin-bottom: 0.2rem;
         }
-
+        
         .contact-text a {
             color: var(--primary);
             text-decoration: none;
             transition: color 0.3s;
         }
-
+        
         .contact-text a:hover {
             color: var(--accent);
         }
-
+        
         /* Footer */
         footer {
             background: var(--secondary);
@@ -296,14 +293,8 @@
             padding: 2rem;
             margin-top: 3rem;
         }
-
+        
         /* Responsive Design */
-        @media (max-width: 1024px) {
-            .project-grid, .skills-container {
-                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            }
-        }
-
         @media (max-width: 768px) {
             .project-grid, .skills-container {
                 grid-template-columns: 1fr;
@@ -313,13 +304,12 @@
                 padding: 2rem 1rem;
             }
         }
-
     </style>
 </head>
 <body>
     <header>
         <div class="profile-header">
-            <img src="profile_pic.jpg" alt="Profile picture of Srisha Ravi, Data Scientist" class="profile-img">
+            <img src="profile_pic.jpg" alt="Srisha Ravi" class="profile-img">
             <h1>Srisha Ravi</h1>
             <h2>Python | SQL | Statistics | Power BI | Machine Learning</h2>
             <div class="social-links">
@@ -331,10 +321,219 @@
         </div>
     </header>
 
-    <!-- Additional sections remain the same with updates in alt texts -->
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <p>Passionate and detail-oriented Machine Learning and AI Engineer with a solid foundation in Python, data analysis, and machine learning algorithms. Experienced in end-to-end ML pipeline development — from data preprocessing and feature engineering to model deployment and performance evaluation. Adept at translating complex problems into actionable solutions using supervised and unsupervised learning, deep learning, and natural language processing.
+        
+        Built and deployed real-world projects including image classification with CNNs, predictive modeling using logistic and linear regression, and ensemble methods like Random Forests and Gradient Boosting. Comfortable with tools and libraries such as scikit-learn, TensorFlow, Keras, pandas, NumPy, and Matplotlib.
+        
+        Strong believer in clean, reusable, and well-documented code.</p>
+    </section>
+
+    <section id="experience">
+        <h2 class="section-title">Experience</h2>
+        <div class="experience-grid">
+            <!-- Experience Card Example -->
+            <div class="experience-card">
+                <h3>Senior Associate Data Analyst</h3>
+                <h4>Kyndryl</h4>
+                <ul>
+                    <li>Worked on machine learning models for predictive analytics.</li>
+                    <li>Managed large-scale data pipelines to improve business decisions.</li>
+                    <li>Created visual dashboards in Power BI for management reporting.</li>
+                    <li>Enhanced data analysis and modeling capabilities using Python, SQL, and Power BI.</li>
+                </ul>
+            </div>
+
+            <div class="experience-card">
+                <h3>Service Delivery Coordinator</h3>
+                <h4>DXC Technologies</h4>
+                <ul>
+                    <li>Coordinated operations to deliver IT solutions across teams.</li>
+                    <li>Optimized workflows and ensured timely project deliveries.</li>
+                    <li>Collaborated with data teams to implement data-driven strategies.</li>
+                </ul>
+            </div>
+
+            <div class="experience-card">
+                <h3>Incident Manager</h3>
+                <h4>NTT Data Services</h4>
+                <ul>
+                    <li>Led incident management processes to ensure resolution of critical issues.</li>
+                    <li>Implemented root cause analysis and problem-solving methods to prevent recurring incidents.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="project-grid">
+            <!-- Example Project Card -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="project_image1.jpg" alt="Project 1">
+                </div>
+                <div class="project-info">
+                    <h3>Smile Detector</h3>
+                    <p>A machine learning model built to detect smiling faces using deep learning techniques.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Deep Learning</span>
+                        <span class="project-tag">TensorFlow</span>
+                        <span class="project-tag">Image Classification</span>
+                    </div>
+                </div>
+            </div>
+            <section id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="project-grid">
+        <!-- Example Project Card 1 -->
+        <div class="project-card">
+            <div class="project-image">
+                <img src="project_image1.jpg" alt="Project 1">
+            </div>
+            <div class="project-info">
+                <h3>Smile Detector</h3>
+                <p>A machine learning model built to detect smiling faces using deep learning techniques.</p>
+                <div class="project-tags">
+                    <span class="project-tag">Deep Learning</span>
+                    <span class="project-tag">TensorFlow</span>
+                    <span class="project-tag">Image Classification</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Example Project Card 2 -->
+        <div class="project-card">
+            <div class="project-image">
+                <img src="project_image2.jpg" alt="Project 2">
+            </div>
+            <div class="project-info">
+                <h3>Netflix Content Analysis</h3>
+                <p>A data analysis project that visualizes trends and patterns in Netflix content, using Python and SQL.</p>
+                <div class="project-tags">
+                    <span class="project-tag">Data Analysis</span>
+                    <span class="project-tag">Python</span>
+                    <span class="project-tag">SQL</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Example Project Card 3 -->
+        <div class="project-card">
+            <div class="project-image">
+                <img src="project_image3.jpg" alt="Project 3">
+            </div>
+            <div class="project-info">
+                <h3>NYC Airbnb Price Prediction</h3>
+                <p>A machine learning model to predict the price of an Airbnb listing in New York City using regression techniques.</p>
+                <div class="project-tags">
+                    <span class="project-tag">Machine Learning</span>
+                    <span class="project-tag">Regression</span>
+                    <span class="project-tag">Scikit-learn</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Example Project Card 4 -->
+        <div class="project-card">
+            <div class="project-image">
+                <img src="project_image4.jpg" alt="Project 4">
+            </div>
+            <div class="project-info">
+                <h3>Gold Price Prediction</h3>
+                <p>A predictive model using historical data to forecast gold prices, with an emphasis on time series analysis.</p>
+                <div class="project-tags">
+                    <span class="project-tag">Time Series</span>
+                    <span class="project-tag">Forecasting</span>
+                    <span class="project-tag">Machine Learning</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Example Project Card 5 -->
+        <div class="project-card">
+            <div class="project-image">
+                <img src="project_image5.jpg" alt="Project 5">
+            </div>
+            <div class="project-info">
+                <h3>Call Center Analytics</h3>
+                <p>An analysis project to improve call center efficiency using data visualization and performance metrics.</p>
+                <div class="project-tags">
+                    <span class="project-tag">Data Analytics</span>
+                    <span class="project-tag">Power BI</span>
+                    <span class="project-tag">Data Visualization</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3>Programming</h3>
+                <ul>
+                    <li>Python</li>
+                    <li>SQL</li>
+                    <li>R</li>
+                    <li>JavaScript</li>
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h3>Machine Learning & AI</h3>
+                <ul>
+                    <li>Supervised Learning</li>
+                    <li>Unsupervised Learning</li>
+                    <li>Deep Learning</li>
+                    <li>Natural Language Processing</li>
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h3>Data Analysis & Visualization</h3>
+                <ul>
+                    <li>Power BI</li>
+                    <li>Matplotlib</li>
+                    <li>Seaborn</li>
+                    <li>Excel</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-info">
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-text">
+                    <h4>Email</h4>
+                    <p><a href="mailto:srisharaviii@gmail.com">srisharaviii@gmail.com</a></p>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <div class="contact-text">
+                    <h4>Phone</h4>
+                    <p><a href="tel:+919487400124">+91 94874 00124</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer>
-        <p>&copy; 2023 Srisha Ravi | All Rights Reserved</p>
+        <p>&copy; 2025 Srisha Ravi | Data Scientist</p>
     </footer>
 </body>
 </html>
